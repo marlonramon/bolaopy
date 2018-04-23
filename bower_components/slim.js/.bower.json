@@ -1,0 +1,46 @@
+{
+  "name": "slim.js",
+  "version": "1.0.2",
+  "main": [
+    "dist/js/slim.js"
+  ],
+  "homepage": "http://ramon-barros.com/slim.js",
+  "license": "MIT",
+  "description": "Slim.js is a front-end Framework inspired by the famous Slim Framework",
+  "authors": [
+    "Ramon Barros <contato@ramon-barros.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests",
+    "app",
+    "src"
+  ],
+  "dependencies": {
+    "jquery": "2.1.3",
+    "bootstrap": "3.3.5",
+    "notifyjs": "^0.4.2",
+    "twig.js": "^0.8.9"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.2",
+    "commit": "6273e1ad0497492ed1a1e06d5477bc1a9b7d54b3"
+  },
+  "_source": "https://github.com/rbarros/slim.js.git",
+  "_target": "^1.0.2",
+  "_originalSource": "slim.js",
+  "_direct": true
+}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+<table border="1" width="300">
+    <thead>
+        <th>Nome</th>
+        <th>Bandeira</th>
+    </thead>
+    {% if clubes %} {% for clube in clubes %}
+    <tr>
+        <td>{{clube.nome}}</td>
+        <td>{{clube.bandeira}}</td>
+    </tr>
+    {% endfor %} {% else %}
+    <p>Nenhum clube cadastrado</p>
+    {% endif %}
+
+</table>
+{% endblock %}

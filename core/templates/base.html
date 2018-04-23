@@ -1,0 +1,80 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bolao</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="{% static '/assets/css/material-dashboard.css' %}">
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="{% static '/assets/img/sidebar-1.jpg' %}">
+
+            <div class="logo">
+                <a href="#" class="simple-text logo-normal">
+                    Bolão
+                </a>
+            </div>
+
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="../examples/dashboard.html">
+                            <i class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/user.html">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Palpites</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/table.html">
+                            <i class="material-icons">content_paste</i>
+                            <p>Pontuação</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'listar-clubes' %}">
+                            <i class="material-icons">archive</i>
+                            <p>Clubes</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="content" class="row content">
+        {% block body %} {% endblock %}
+
+    </div>
+
+    <script type="text/javascript" src="{% static 'popper.js/dist/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'slim.js/dist/js/slim.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap-material-design.js' %}"></script>
+
+    <script src="{% static '/assets/js/material-dashboard.js' %}"></script>
+
+</body>
+
+</html>
