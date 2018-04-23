@@ -1,19 +1,39 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block body %}
 
-{% block body %}
-<table border="1" width="300">
-    <thead>
-        <th>Nome</th>
-        <th>Bandeira</th>
-    </thead>
-    {% if clubes %} {% for clube in clubes %}
-    <tr>
-        <td>{{clube.nome}}</td>
-        <td>{{clube.bandeira}}</td>
-    </tr>
-    {% endfor %} {% else %}
-    <p>Nenhum clube cadastrado</p>
-    {% endif %}
+<div class="container-fluid">
 
-</table>
-{% endblock %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title ">Seleções</h4>
+                    <p class="card-category">Seleções que estarão disputando a copa</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>Nome</th>
+                                <th>Bandeira</th>
+                            </thead>
+                            <tbody>
+                                {% if clubes %} 
+                                    {% for clube in clubes %}
+                                    <tr>
+                                        <td>{{clube.nome}}</td>
+                                        <td>{{clube.bandeira}}</td>
+                                    </tr>
+                                    {% endfor %} {% else %}
+                                <p>Nenhum clube cadastrado</p>                                
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% endblock %}
