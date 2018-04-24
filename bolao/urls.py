@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="index"),
     url(r'^clubes$', views.clubes, name="listar-clubes"),
-    
+    url(r'^clube$', views.clube_new, name='clube_new'),
+    # url(r'^post/(?P<pk>d+)/$', views.clube_detail, name='clube_detail')
     
 ]

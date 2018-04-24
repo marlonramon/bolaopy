@@ -141,10 +141,7 @@ STATICFILES_FINDERS = (
 )
 
 BOWER_INSTALLED_APPS = (
-    'jquery',
-    'bootstrap-material-design@4.1.1',
-    'slim.js    ',
-    'popper.js',    
+    'jquery#^3.3.1',    
 )
 
 
