@@ -20,8 +20,9 @@ from core import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="index"),
-    url(r'^clubes$', views.clubes, name="listar-clubes"),
+    url(r'^clubes$', views.clubes, name="clube_list"),
     url(r'^clube$', views.clube_new, name='clube_new'),
-    # url(r'^post/(?P<pk>d+)/$', views.clube_detail, name='clube_detail')
+    url(r'^clube/(?P<pk>\d+)$', views.clube_update, name='clube_update'),
+    url(r'^clube/(?P<pk>\d+)/delete', views.clube_delete, name='clube_delete')
     
 ]

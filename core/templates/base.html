@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="{% static '/assets/css/material-dashboard.css' %}"/>
+    <link rel="stylesheet" href="{% static '/sweetalert2/dist/sweetalert2.min.css' %}"/>
 
 
 </head>
@@ -49,7 +50,7 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{% url 'listar-clubes' %}">
+                        <a class="nav-link" href="{% url 'clube_list' %}">
                             <i class="material-icons">archive</i>
                             <p>Clubes</p>
                         </a>
@@ -68,7 +69,7 @@
                         <a class="navbar-brand" href="#pablo">Bolão 2018</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        aria-expanded="false" aria-label="Toggle navigation">/sweetalert2/dist/sweetalert2.min.js
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>
@@ -123,6 +124,7 @@
             </nav>
             <!-- End Navbar -->
             <div class="content">
+                {% include 'partials/messages.html' %}
                 {% block body %} {% endblock %}
 
             </div>
@@ -150,6 +152,8 @@
 <script src="{% static '/assets/js/plugins/bootstrap-notify.js' %}"></script>
 <!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
 <script src="{% static '/assets/js/material-dashboard.js' %}"></script>
+<script src="{% static '/assets/js/plugins/demo.js' %}"></script>
+<script src="{% static '/sweetalert2/dist/sweetalert2.min.js' %}"></script>
 
 
 
